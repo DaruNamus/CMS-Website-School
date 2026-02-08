@@ -2,9 +2,7 @@
 
 A modern, responsive, and dynamic school website for SMAN 1 Gebog, featuring a comprehensive Admin Dashboard (CMS) for managing content.
 
-![Project Screenshot](public/screenshot.png) *(Place a screenshot here if available)*
-
-## 🚀 Technologies Used
+## Technologies Used
 
 **Frontend:**
 *   **React** (Vite)
@@ -18,7 +16,7 @@ A modern, responsive, and dynamic school website for SMAN 1 Gebog, featuring a c
 *   **Multer** (File Uploads)
 *   **JWT** (implied auth structure)
 
-## ✨ Key Features
+## Key Features
 
 *   **Public Portal**:
     *   **Home**: Dynamic hero section, latest news, and school highlights.
@@ -36,7 +34,7 @@ A modern, responsive, and dynamic school website for SMAN 1 Gebog, featuring a c
     *   **Staff Management**: Manage teacher and staff directory.
     *   **Secure Login**: Admin authentication system.
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 *   Node.js installed.
@@ -88,7 +86,7 @@ npm run dev
 ```
 *The frontend will run on `http://localhost:5173`*
 
-## 📂 Project Structure
+## Project Structure
 
 *   **/src**: React frontend source code.
     *   **/app/components**: Reusable UI components (Header, Footer, Admin Editors).
@@ -96,10 +94,3 @@ npm run dev
 *   **/server**: Node.js backend.
     *   **index.js**: Main server entry point and API routes.
     *   **/uploads**: Directory for uploaded images.
-
-## 👥 Authors
-
-*   Developed by **Adhya** & **Daru Team**
-
----
-© 2024 SMAN 1 Gebog. All rights reserved.
