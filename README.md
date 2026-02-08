@@ -14,7 +14,6 @@ A modern, responsive, and dynamic school website for SMAN 1 Gebog, featuring a c
 *   **Node.js** & **Express.js**
 *   **MySQL** (Database)
 *   **Multer** (File Uploads)
-*   **JWT** (implied auth structure)
 
 ## Key Features
 
@@ -61,7 +60,6 @@ DB_USER=root
 DB_PASSWORD=
 DB_NAME=sma1gebog
 PORT=5001
-JWT_SECRET=your_secret_key_here
 ```
 
 Start the backend server:
