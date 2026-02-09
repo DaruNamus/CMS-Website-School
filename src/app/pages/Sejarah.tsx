@@ -72,19 +72,19 @@ export function Sejarah() {
           <div className="bg-blue-50 border-l-4 border-blue-600 rounded-xl p-6">
             <h3 className="text-xl font-bold text-gray-900 mb-3">Informasi Pendirian</h3>
             <div className="space-y-2 text-gray-700">
-              <p><strong>SK Pendirian:</strong> {data.foundingInfo.sk}</p>
-              <p><strong>Tanggal:</strong> {data.foundingInfo.date}</p>
-              <p><strong>NSS:</strong> {data.foundingInfo.nss}</p>
-              <p><strong>NPSN:</strong> {data.foundingInfo.npsn}</p>
+              <p><strong>SK Pendirian:</strong> {data.foundingInfo?.sk || '-'}</p>
+              <p><strong>Tanggal:</strong> {data.foundingInfo?.date || '-'}</p>
+              <p><strong>NSS:</strong> {data.foundingInfo?.nss || '-'}</p>
+              <p><strong>NPSN:</strong> {data.foundingInfo?.npsn || '-'}</p>
             </div>
           </div>
 
           <div className="bg-blue-50 border-l-4 border-blue-600 rounded-xl p-6">
             <h3 className="text-xl font-bold text-gray-900 mb-3">Kepala Sekolah Pertama</h3>
             <div className="space-y-2 text-gray-700">
-              <p><strong>Nama:</strong> {data.firstPrincipal.name}</p>
-              <p><strong>Tahun:</strong> {data.firstPrincipal.year}</p>
-              <p><strong>Status:</strong> {data.firstPrincipal.status}</p>
+              <p><strong>Nama:</strong> {data.firstPrincipal?.name || '-'}</p>
+              <p><strong>Tahun:</strong> {data.firstPrincipal?.year || '-'}</p>
+              <p><strong>Status:</strong> {data.firstPrincipal?.status || '-'}</p>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ export function Sejarah() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Perkembangan Sekolah</h2>
 
           <div className="space-y-6">
-            {data.timeline.map((item, index) => (
+            {(data.timeline || []).map((item, index) => (
               <div key={index} className="flex gap-6">
                 <div className="flex-shrink-0">
                   <div className="w-20 h-20 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold text-lg">

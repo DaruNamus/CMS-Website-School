@@ -72,7 +72,7 @@ export function VisiMisi() {
           </div>
 
           <div className="space-y-4">
-            {data.misi.map((misi, index) => (
+            {(data.misi || []).map((misi, index) => (
               <div key={index} className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-1">
                   <span className="text-blue-700 font-bold text-sm">{index + 1}</span>
@@ -119,7 +119,7 @@ export function VisiMisi() {
           </div>
 
           <div className="space-y-4">
-            {data.tujuan.map((tujuan, index) => (
+            {(data.tujuan || []).map((tujuan, index) => (
               <div key={index} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
                 <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
                   <span className="text-blue-700 font-bold text-sm">{tujuan.label}</span>

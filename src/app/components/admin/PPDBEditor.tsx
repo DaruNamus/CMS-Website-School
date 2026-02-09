@@ -103,7 +103,7 @@ export function PPDBEditor() {
                     </button>
                 </h3>
                 <div className="space-y-3">
-                    {timeline.map((item, index) => (
+                    {(timeline || []).map((item, index) => (
                         <div key={index} className="flex gap-4 items-start">
                             <input
                                 type="text"
@@ -139,7 +139,7 @@ export function PPDBEditor() {
                     </button>
                 </h3>
                 <div className="space-y-3">
-                    {requirements.map((req, index) => (
+                    {(requirements || []).map((req, index) => (
                         <div key={index} className="flex gap-4 items-center">
                             <span className="text-gray-400 font-medium w-6 text-center">{index + 1}.</span>
                             <input
@@ -168,7 +168,7 @@ export function PPDBEditor() {
                         <label className="block text-sm font-medium text-gray-700 mb-1">Telepon</label>
                         <input
                             type="text"
-                            value={contact.phone}
+                            value={contact?.phone || ''}
                             onChange={(e) => setContact({ ...contact, phone: e.target.value })}
                             className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
                         />
@@ -177,7 +177,7 @@ export function PPDBEditor() {
                         <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
                         <input
                             type="text"
-                            value={contact.email}
+                            value={contact?.email || ''}
                             onChange={(e) => setContact({ ...contact, email: e.target.value })}
                             className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
                         />
@@ -186,7 +186,7 @@ export function PPDBEditor() {
                         <label className="block text-sm font-medium text-gray-700 mb-1">Jam Layanan</label>
                         <input
                             type="text"
-                            value={contact.hours}
+                            value={contact?.hours || ''}
                             onChange={(e) => setContact({ ...contact, hours: e.target.value })}
                             className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
                         />

@@ -335,7 +335,7 @@ export function ProfileEditor() {
                                 </button>
                             </div>
                             <div className="space-y-3">
-                                {visiMisi.misi.map((item, index) => (
+                                {(visiMisi.misi || []).map((item, index) => (
                                     <div key={index} className="flex gap-2">
                                         <div className="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-700 font-bold rounded-lg flex-shrink-0">
                                             {index + 1}
@@ -414,7 +414,7 @@ export function ProfileEditor() {
                                     <label className="block text-sm font-medium text-gray-700 mb-1">NO. SK</label>
                                     <input
                                         type="text"
-                                        value={sejarah.foundingInfo.sk}
+                                        value={sejarah.foundingInfo?.sk || ''}
                                         onChange={(e) => handleNestedSejarahChange('foundingInfo', 'sk', e.target.value)}
                                         className="w-full p-2 border border-gray-300 rounded-lg"
                                     />
@@ -423,7 +423,7 @@ export function ProfileEditor() {
                                     <label className="block text-sm font-medium text-gray-700 mb-1">Tanggal</label>
                                     <input
                                         type="text"
-                                        value={sejarah.foundingInfo.date}
+                                        value={sejarah.foundingInfo?.date || ''}
                                         onChange={(e) => handleNestedSejarahChange('foundingInfo', 'date', e.target.value)}
                                         className="w-full p-2 border border-gray-300 rounded-lg"
                                     />
@@ -432,7 +432,7 @@ export function ProfileEditor() {
                                     <label className="block text-sm font-medium text-gray-700 mb-1">NSS</label>
                                     <input
                                         type="text"
-                                        value={sejarah.foundingInfo.nss}
+                                        value={sejarah.foundingInfo?.nss || ''}
                                         onChange={(e) => handleNestedSejarahChange('foundingInfo', 'nss', e.target.value)}
                                         className="w-full p-2 border border-gray-300 rounded-lg"
                                     />
@@ -441,7 +441,7 @@ export function ProfileEditor() {
                                     <label className="block text-sm font-medium text-gray-700 mb-1">NPSN</label>
                                     <input
                                         type="text"
-                                        value={sejarah.foundingInfo.npsn}
+                                        value={sejarah.foundingInfo?.npsn || ''}
                                         onChange={(e) => handleNestedSejarahChange('foundingInfo', 'npsn', e.target.value)}
                                         className="w-full p-2 border border-gray-300 rounded-lg"
                                     />
@@ -454,7 +454,7 @@ export function ProfileEditor() {
                                     <label className="block text-sm font-medium text-gray-700 mb-1">Nama</label>
                                     <input
                                         type="text"
-                                        value={sejarah.firstPrincipal.name}
+                                        value={sejarah.firstPrincipal?.name || ''}
                                         onChange={(e) => handleNestedSejarahChange('firstPrincipal', 'name', e.target.value)}
                                         className="w-full p-2 border border-gray-300 rounded-lg"
                                     />
@@ -463,7 +463,7 @@ export function ProfileEditor() {
                                     <label className="block text-sm font-medium text-gray-700 mb-1">Tahun Menjabat</label>
                                     <input
                                         type="text"
-                                        value={sejarah.firstPrincipal.year}
+                                        value={sejarah.firstPrincipal?.year || ''}
                                         onChange={(e) => handleNestedSejarahChange('firstPrincipal', 'year', e.target.value)}
                                         className="w-full p-2 border border-gray-300 rounded-lg"
                                     />
@@ -472,7 +472,7 @@ export function ProfileEditor() {
                                     <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
                                     <input
                                         type="text"
-                                        value={sejarah.firstPrincipal.status}
+                                        value={sejarah.firstPrincipal?.status || ''}
                                         onChange={(e) => handleNestedSejarahChange('firstPrincipal', 'status', e.target.value)}
                                         className="w-full p-2 border border-gray-300 rounded-lg"
                                     />
@@ -492,7 +492,7 @@ export function ProfileEditor() {
                                 </button>
                             </div>
                             <div className="space-y-4">
-                                {sejarah.timeline.map((item, index) => (
+                                {(sejarah.timeline || []).map((item, index) => (
                                     <div key={index} className="flex gap-4 p-4 bg-white rounded-lg border border-gray-200">
                                         <div className="flex-1 space-y-3">
                                             <div className="flex gap-4">
@@ -709,7 +709,7 @@ export function ProfileEditor() {
                                     </button>
                                 </div>
                                 <div className="space-y-3">
-                                    {osis.misi.map((item, index) => (
+                                    {(osis.misi || []).map((item, index) => (
                                         <div key={index} className="flex gap-2">
                                             <div className="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-700 font-bold rounded-lg flex-shrink-0">
                                                 {index + 1}

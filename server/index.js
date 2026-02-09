@@ -226,7 +226,16 @@ app.get('/api/ppdb', async (req, res) => {
         const [rows] = await db.query('SELECT * FROM ppdb_content');
         const content = {};
         rows.forEach(row => {
-            content[row.section_key] = row.content; // Content is already JSON due to mysql2 type casting for JSON columns or we parse it
+            let rowContent = row.content;
+            if (typeof rowContent === 'string') {
+                try {
+                    rowContent = JSON.parse(rowContent);
+                } catch (e) {
+                    console.error('Error parsing PPDB content JSON:', e);
+                    rowContent = {}; // Fallback
+                }
+            }
+            content[row.section_key] = rowContent;
         });
         res.json(content);
     } catch (error) {
@@ -264,7 +273,16 @@ app.get('/api/profile', async (req, res) => {
         const [rows] = await db.query('SELECT * FROM profile_content');
         const content = {};
         rows.forEach(row => {
-            content[row.section_key] = row.content;
+            let rowContent = row.content;
+            if (typeof rowContent === 'string') {
+                try {
+                    rowContent = JSON.parse(rowContent);
+                } catch (e) {
+                    console.error('Error parsing Profile content JSON:', e);
+                    rowContent = {}; // Fallback
+                }
+            }
+            content[row.section_key] = rowContent;
         });
         res.json(content);
     } catch (error) {
